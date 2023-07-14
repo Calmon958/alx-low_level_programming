@@ -1,4 +1,4 @@
-#include <stdio>
+#include <stdio.h>
 /**
  *main - beginning of code
  *Description: Prints the size of various types on the comp
