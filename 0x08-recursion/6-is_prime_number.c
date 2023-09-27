@@ -4,27 +4,23 @@
  *@n: number to be checked
  *Return: 1 or 0
  */
+int actual_prime(int n, int i);
 int is_prime_number(unsigned int n, unsigned int c)
 {
-if (n % c == 0)
-{
-if (n == c)
-return (1);
-else
+if (n <= 1)
 return (0);
-}
-return (0 + is_prime(n, c + 1)):
+return (actual_prime(n, n - 1));
 }
 /**
- *is_print_number - detects if an input is a prime number
- *@n: input
- *Return: 1 if n is a prime number, 0 otherwise
+ * actual_prime - calculates recursive prime number
+ * @n: number to evaluate
+ * @i: iterator
+ * Return 1 if n is prime else 0
  */
-int is_prime_number(int n)
+int actual_prime(int n, int i)
 {
-if (n == 0 || n < 0 || n == 1)
-return (0);
-return (is_prime(n, 2));
+if (n == 1)
+return (1);
+if (n % i == 0 && i > 0)
+return (actual_prime(n, i - 1));
 }
-
-  

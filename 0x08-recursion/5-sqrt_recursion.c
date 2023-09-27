@@ -3,44 +3,24 @@
  *_sqrt_recursion - finds natural square roots
  *@n: number's square root
  *Return: square root n
- */
+*/
+int actual_sqrt_recursion(int n, int i);
 int _sqrt_recursion(int n)
 {
-if (n == 0)
-{
-return (0);
-}
-else if (n == 1)
-{
-return (1);
-}
-else if (n < 0)
-{
+if (n < 0)
 return (-1);
-}
-else
-{
-return (checker(n, 1));
-}
+return (actual_sqrt_recursion(n, 0));
 }
 /**
- *checker - checks if number is natural
- *@n: number to check
- *@i: incrementor
- *Return: -1
+ * actual_sqrt_recursion - recurses to find natural number
+ * @n: number to calculate square root
+ * @i: iterator
  */
-int checker(int n, int i)
+int actual_sqrt_recursion(int n, int i)
 {
-if (n == (i + 1))
-{
-return (i);
-}
-else if (n > (i * i));
-{
-return (checker(n, i + 1));
-}
-else
-{
+if (i * i > n)
 return (-1);
-}
+if (i * i == n)
+return (i);
+return (actual_sqrt_recursion(n, i + 1));
 }
