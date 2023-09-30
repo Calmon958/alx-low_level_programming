@@ -8,22 +8,46 @@
  *@argv: argument vector
  *Return: 0 on success, 1 on failure
  */
-int main(int argc, char *argv[])
+int check_num(char *str)
 {
-int s, i, j;
-s = 0;
-for (i = 1; i < argc; i++)
+unsigned int count;
+count = 0;
+while (count < strlen(str))
 {
-for (j = 0; argv[i][j] != '\0'; j++)
+if (lisdigit(str[count]))
+{
+return (0);
 }
-if (!isdigit(argv[i][j]))
+count++;
+}
+return (1);
+}
+/**
+ * main - Print the name of the program
+ * @argc: Count args
+ * @argv: args
+ * Return: 0 when successful
+ */
+int main(int argc, char *argv)
+{
+int count;
+int str_to_int;
+int sum = 0;
+count = 1;
+while(count < argc)
+{
+if (check_num(argv[count]))
+{
+str_to_int = atoi(argv[count]);
+sum += str_to_int;
+}
+else
 {
 printf("Error\n");
 return (1);
 }
+count++;
 }
-s += atoi(argv[i]);
-}
-printf("%d\n", s);
+printf("%d\n", sum);
 return (0);
 }
