@@ -3,9 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- *main - adds all arguments together if they are digits
- *@argc: argument count only accepts ints separated by spaces
- *@argv: argument vector
+ *check_num - adds all arguments together if they are digits
+ *@str: array str
  *Return: 0 on success, 1 on failure
  */
 int check_num(char *str)
@@ -14,7 +13,7 @@ unsigned int count;
 count = 0;
 while (count < strlen(str))
 {
-if (lisdigit(str[count]))
+if (!isdigit(str[count]))
 {
 return (0);
 }
