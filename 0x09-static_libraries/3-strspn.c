@@ -12,9 +12,9 @@ i = 0;
 while (s[i] != '\0')
 {
 j = 0;
-while (accept[j] != '\0' && s[i] != aaccept[j])
+while (accept[j] != '\0' && s[i] != accept[j])
 j++;
-if (accept[j] == '\0';
+if (accept[j] == '\0')
 return (i);
 i++;
 }
