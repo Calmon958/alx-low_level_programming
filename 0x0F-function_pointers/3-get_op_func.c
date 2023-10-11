@@ -16,11 +16,7 @@ op_t ops[] = {
 {NULL, NULL}
 };
 int x;
-while (x < 5)
-{
-if (*ops[x].op == *s && !(*(s + 1)))
-return (ops[x].f);
+ while (ops[x].op != NULL && *(ops[x].op) != *s)
 x++;
-}
-return (NULL);
+return (ops[x].f);
 }
