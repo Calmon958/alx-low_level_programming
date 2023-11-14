@@ -1,1 +1,0 @@
-More functions using malloc, exit, calloc, realloc and free.
