@@ -1,4 +1,4 @@
-We talk about recursion;
+I talked about recursion;
 0-puts recusion.c: prints a string followed by a new line
 1-prints rev recursion.c: prints a string in reverse
 2-strlen recursion.c: returns the length of a string
