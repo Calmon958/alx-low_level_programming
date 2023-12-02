@@ -1,10 +1,10 @@
 #include "main.h"
+int actual_sqrt_recursion(int n, int i);
 /**
  *_sqrt_recursion - finds natural square roots
  *@n: number's square root
  *Return: square root n
 */
-int actual_sqrt_recursion(int n, int i);
 int _sqrt_recursion(int n)
 {
 if (n < 0)
